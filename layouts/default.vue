@@ -1,7 +1,8 @@
 <template>
-  <div class="h-screen w-screen">
+  <div class="pga dark bg-white dark:bg-light-black w-screen dark:text-green align-middle text-center">
     <DefaultHeader />
-    <div class="content h-full w-full">
+    <div class="main-content h-full w-full dark:bg-black">
+      <NuxtLoadingIndicator />
       <slot />
     </div>
     <DefaultFooter />
@@ -19,5 +20,11 @@ export default defineComponent({
 </script>
 
 <style scoped>
-
+.pga {
+  min-height: 100vh;
+  /* min-height: -webkit-fill-available; */
+}
+.main-content {
+ min-height: 80vh;
+}
 </style>
