@@ -36,7 +36,7 @@ export default defineComponent({
   },
   computed: {
     clubLogo() {
-      return `/img/${this.type}.png`;
+      return `/golf-launch-monitor-averages/img/${this.type}.png`;
     },
   },
 })

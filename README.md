@@ -22,21 +22,20 @@ pnpm install
 Start the development server on http://localhost:3000
 
 ```bash
-npm run dev
+npm start
 ```
 
 ## Production
 
-Build the application for production:
+Generate
 
 ```bash
-npm run build
+npm run generate
 ```
 
-Locally preview production build:
+Build for production
 
 ```bash
-npm run preview
+npm run deploy
 ```
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
