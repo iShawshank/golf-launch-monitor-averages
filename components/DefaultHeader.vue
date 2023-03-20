@@ -1,6 +1,6 @@
 <template>
   <header class="header px-10 py-1 bg-light-black border-neutral-2 sticky top-0 h-15 md:h-10">
-    <nav class="header__links grid grid-cols-3 md:grid-cols-6">
+    <nav class="header__links grid grid-cols-3 md:grid-cols-6 lg:max-w-3xl">
       <NuxtLink class="header__link border-r-2" to="/" >Home</NuxtLink>
       <NuxtLink class="header__link border-r-2" to="/PGA" >PGA</NuxtLink>
       <NuxtLink class="header__link md:border-r-2" to="/LPGA" >LPGA</NuxtLink>
