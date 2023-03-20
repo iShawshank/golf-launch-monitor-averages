@@ -4,7 +4,7 @@
       <NuxtLink class="header__link border-r-2" to="/" >Home</NuxtLink>
       <NuxtLink class="header__link border-r-2" to="/PGA" >PGA</NuxtLink>
       <NuxtLink class="header__link border-r-2" to="/LPGA" >LPGA</NuxtLink>
-      <NuxtLink class="header__link" to="https://account.venmo.com/u/ishawshank39" target="_blank" >If you are enjoying this app, buy me a 🍻</NuxtLink>
+      <NuxtLink class="header__link" to="https://account.venmo.com/u/ishawshank39" target="_blank" >If you're enjoying this app, buy me a 🍻</NuxtLink>
     </nav>
   </header>
 </template>
