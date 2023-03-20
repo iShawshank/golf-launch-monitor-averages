@@ -1,0 +1,1 @@
+import{a as e,b as o,e as r,o as t}from"./entry.a786eaab.js";const n=e({props:["error"],mounted(){console.log(this.error)}});function s(c,a,p,_,d,f){return t(),r("div")}const l=o(n,[["render",s]]);export{l as default};
