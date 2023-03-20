@@ -1,5 +1,5 @@
 <template>
-  <header class="header flex px-10 py-1 dark:bg-light-black dark:border-neutral-2 sticky top-0">
+  <header class="header flex px-10 py-1 bg-light-black border-neutral-2 sticky top-0">
     <nav class="header__links">
       <NuxtLink class="header__link border-r-2" to="/" >Home</NuxtLink>
       <NuxtLink class="header__link border-r-2" to="/PGA" >PGA</NuxtLink>

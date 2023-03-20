@@ -1,7 +1,7 @@
 <template>
-  <div class="pga dark bg-white dark:bg-light-black w-screen dark:text-green align-middle text-center">
+  <div class="pga bg-light-black w-screen text-green align-middle text-center">
     <DefaultHeader />
-    <div class="main-content h-full w-full dark:bg-black">
+    <div class="main-content h-full w-full bg-black">
       <NuxtLoadingIndicator />
       <slot />
     </div>

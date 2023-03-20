@@ -1,5 +1,5 @@
 <template>
-  <div class="club-option border border-black dark:border-white rounded-xl p-2 my-4 justify-items-center justify-center w-full">
+  <div class="club-option border border-white rounded-xl p-2 my-4 justify-items-center justify-center w-full">
     <NuxtLink :to="`/${$route.params.tour}/${id}`">
       <div class="club-option__text h-11">
         <h2>{{ name }}</h2>

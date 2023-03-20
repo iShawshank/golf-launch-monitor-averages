@@ -1,6 +1,6 @@
-# Nuxt 3 Minimal Starter
+# golf-launch-monitor-averages
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Allows you to compare your stats to the PGA and LPGA tour averages.
 
 ## Setup
 

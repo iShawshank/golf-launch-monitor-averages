@@ -1,12 +1,12 @@
 <template>
   <div class="single-club-page container-large h-full py-2">
     <div class="my-4 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 align-middle justify-center">
-      <NuxtLink v-for="club in clubs" :key="club.id" :to="`/${$route.params.tour}/${club.id}`" class="m-2 p-2 dark:text-white border-black dark:border-white border-2 rounded-xl flex justify-center align-middle flex-col">
+      <NuxtLink v-for="club in clubs" :key="club.id" :to="`/${$route.params.tour}/${club.id}`" class="m-2 p-2 text-white border-white border-2 rounded-xl flex justify-center align-middle flex-col">
         {{ club.name }}
       </NuxtLink>
     </div>
     <h1 class="text-xl">
-      {{ $route.params.tour }} Tour <span class="dark:text-white">{{ $route.params.club }}</span> Average
+      {{ $route.params.tour }} Tour <span class="text-white">{{ $route.params.club }}</span> Average
     </h1>
     <div class="averages h-full grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 m-5 items-center">
       <StatsCard name="Club speed" extra-info="mph" :value="tourAverages.clubSpeed" />
@@ -26,6 +26,9 @@
 import { defineComponent } from 'vue'
 import { statsForClub, allClubs } from '~~/utils/tourAverages';
 import StatsCard from '~~/components/StatsCard.vue';
+definePageMeta({
+  middleware: ['tour-redirect']
+})
 
 export default defineComponent({
   components: { StatsCard },
@@ -38,7 +41,7 @@ export default defineComponent({
     tourAverages() {
       return statsForClub(this.$route.params.club as string, this.$route.params.tour as string);
     }
-  }
+  },
 })
 </script>
 
