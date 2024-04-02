@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  @apply bg-light-black;
+  @apply text-green;
+}
+
+.header {
+  height: 2.5rem;
+  border-bottom: 1px solid;
+}
+
+.footer {
+  height: 40px;
+  border-top: 1px solid;
+}
+
+.link {
+  padding-inline: 40px;
+}
+
+.main-content {
+  /* min-height: 80vh; */
+  width: 100%;
+  padding: 20px;
+}
+
+.tour-logo {
+  max-height: 300px;
+}
+
+.club-option {
+  height: 150px;
+  width: 150px;
+}
+
+.stats-card {
+  height: 150px;
+}
+
+.stats-card-name {
+  height: 65px;
+}
