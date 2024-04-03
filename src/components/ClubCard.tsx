@@ -27,7 +27,7 @@ const ClubCard = ({
         </div>
         <div className="club-option-logo flex justify-center items-center">
           <img
-            className="club-option-logo-image size-20"
+            className="club-option-logo-image"
             src={clubLogo}
             alt={`${type} icon`}
           />

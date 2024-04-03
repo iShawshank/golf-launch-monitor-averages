@@ -22,7 +22,7 @@
 }
 
 .main-content {
-  /* min-height: 80vh; */
+  min-height: 90vh;
   width: 100%;
   padding: 20px;
 }
@@ -34,12 +34,54 @@
 .club-option {
   height: 150px;
   width: 150px;
+
+  @media screen and (min-width: 1024px) {
+    height: 200px;
+    width: 200px;
+  }
+
+  @media screen and (min-width: 1630px) {
+    height: 250px;
+    width: 250px;
+  }
+}
+
+.club-option-logo-image {
+  height: 80px;
+  width: 80px;
+
+  @media screen and (min-width: 1024px) {
+    height: 120px;
+    width: 120px;
+  }
+
+  @media screen and (min-width: 1630px) {
+    height: 150px;
+    width: 150px;
+  }
 }
 
 .stats-card {
   height: 150px;
+  width: 150px;
+
+  @media screen and (min-width: 1024px) {
+    height: 160px;
+    width: 200px;
+  }
+
+  @media screen and (min-width: 1630px) {
+    height: 200px;
+    width: 300px;
+  }
 }
 
 .stats-card-name {
   height: 65px;
+}
+
+.stats-card-value {
+  @media screen and (min-width: 1630px) {
+    font-size: 6rem !important;
+  }
 }

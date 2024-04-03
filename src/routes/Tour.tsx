@@ -10,7 +10,7 @@ const Tour = () => {
       <h1 className="text-white text-xl mb-4">
         For {tour} Tour averages, select a club
       </h1>
-      <div className="club-selector grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-6 w-full justify-between justify-items-center align-middle px-6 h-full">
+      <div className="club-selector grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 w-full justify-between justify-items-center align-middle px-6 h-full">
         {clubs.map((club) => (
           <ClubCard
             key={club.id}

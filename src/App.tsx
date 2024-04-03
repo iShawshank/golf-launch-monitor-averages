@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="pga w-full flex flex-col items-center justify-center bg-black text-green">
       <Header />
-      <div className="main-content">
+      <div className="main-content flex w-full items-center">
         <Outlet />
       </div>
       <Footer />

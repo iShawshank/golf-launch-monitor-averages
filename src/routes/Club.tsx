@@ -18,7 +18,7 @@ const Club = () => {
   }, [tour, club]);
 
   return (
-    <div className="single-club-page container-large h-full py-2 text-center">
+    <div className="single-club-page flex flex-col py-2 justify-center text-center w-full">
       <div className="my-4 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 align-middle justify-center">
         {clubs.map((club) => (
           <Link
@@ -33,47 +33,47 @@ const Club = () => {
       <h1 className="text-xl">
         {tour} Tour <span className="text-white">{club}</span> Average
       </h1>
-      <div className="averages h-full grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 m-5 items-center gap-4">
+      <div className="averages h-full grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-5 m-5 justify-items-center items-center">
         <StatsCard
           name="Club speed"
           extraInfo="mph"
           value={tourAverages.clubSpeed}
         />
         <StatsCard
-          name="Angle of Attack"
-          extra-info="deg"
-          value={tourAverages.attackAngle}
-        />
-        <StatsCard
           name="Ball speed"
-          extra-info="mph"
+          extraInfo="mph"
           value={tourAverages.ballSpeed}
         />
         <StatsCard name="Smash" value={tourAverages.smash} />
         <StatsCard
-          name="Launch Angle (VLA)"
-          extra-info="deg"
-          value={tourAverages.VLA}
-        />
-        <StatsCard
           name="Spin"
-          extra-info="rpm"
+          extraInfo="rpm"
           value={tourAverages.spin}
         />
         <StatsCard
+          name="Carry"
+          extraInfo="yds"
+          value={tourAverages.carry}
+        />
+        <StatsCard
           name="Peak Height"
-          extra-info="yds"
+          extraInfo="yds"
           value={tourAverages.peakHeight}
         />
         <StatsCard
           name="Descent Angle"
-          extra-info="deg"
+          extraInfo="deg"
           value={tourAverages.descentAngle}
         />
         <StatsCard
-          name="Carry"
-          extra-info="yds"
-          value={tourAverages.carry}
+          name="Angle of Attack"
+          extraInfo="deg"
+          value={tourAverages.attackAngle}
+        />
+        <StatsCard
+          name="Launch Angle (VLA)"
+          extraInfo="deg"
+          value={tourAverages.VLA}
         />
       </div>
     </div>
