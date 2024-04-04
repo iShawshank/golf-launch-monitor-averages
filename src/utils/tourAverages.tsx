@@ -1,5 +1,21 @@
+export interface IClub {
+  id: string;
+  name: string;
+  type: string;
+  clubSpeed: number;
+  attackAngle: number;
+  ballSpeed: number;
+  smash: number;
+  VLA: number;
+  spin: number;
+  peakHeight: number;
+  descentAngle: number;
+  carry: number;
+  extraText?: string;
+}
+
 const pgaTourAverages = {
-  'Driver': { 
+  Driver: {
     id: 'Driver',
     name: 'Driver',
     type: 'wood',
@@ -13,7 +29,7 @@ const pgaTourAverages = {
     descentAngle: 38,
     carry: 275,
   },
-  '3-wood': { 
+  '3-wood': {
     id: '3-wood',
     name: '3 Wood',
     type: 'wood',
@@ -27,7 +43,7 @@ const pgaTourAverages = {
     descentAngle: 43,
     carry: 243,
   },
-  '5-wood': { 
+  '5-wood': {
     id: '5-wood',
     name: '5 Wood',
     type: 'wood',
@@ -41,7 +57,7 @@ const pgaTourAverages = {
     descentAngle: 47,
     carry: 230,
   },
-  'Hybrid': { 
+  Hybrid: {
     id: 'Hybrid',
     name: 'Hybrid',
     type: 'hybrid',
@@ -59,7 +75,7 @@ const pgaTourAverages = {
   '3-iron': {
     id: '3-iron',
     name: '3 Iron',
-    type: 'iron', 
+    type: 'iron',
     clubSpeed: 98,
     attackAngle: -3.1,
     ballSpeed: 142,
@@ -70,10 +86,10 @@ const pgaTourAverages = {
     descentAngle: 46,
     carry: 212,
   },
-  '4-iron': { 
+  '4-iron': {
     id: '4-iron',
     name: '4 Iron',
-    type: 'iron', 
+    type: 'iron',
     clubSpeed: 96,
     attackAngle: -3.4,
     ballSpeed: 137,
@@ -84,10 +100,10 @@ const pgaTourAverages = {
     descentAngle: 48,
     carry: 203,
   },
-  '5-iron': { 
+  '5-iron': {
     id: '5-iron',
     name: '5 Iron',
-    type: 'iron', 
+    type: 'iron',
     clubSpeed: 94,
     attackAngle: -3.7,
     ballSpeed: 132,
@@ -98,10 +114,10 @@ const pgaTourAverages = {
     descentAngle: 49,
     carry: 194,
   },
-  '6-iron': { 
+  '6-iron': {
     id: '6-iron',
     name: '6 Iron',
-    type: 'iron', 
+    type: 'iron',
     clubSpeed: 92,
     attackAngle: -4.1,
     ballSpeed: 127,
@@ -112,10 +128,10 @@ const pgaTourAverages = {
     descentAngle: 50,
     carry: 183,
   },
-  '7-iron': { 
+  '7-iron': {
     id: '7-iron',
     name: '7 Iron',
-    type: 'iron', 
+    type: 'iron',
     clubSpeed: 90,
     attackAngle: -4.3,
     ballSpeed: 120,
@@ -126,10 +142,10 @@ const pgaTourAverages = {
     descentAngle: 50,
     carry: 172,
   },
-  '8-iron': { 
+  '8-iron': {
     id: '8-iron',
     name: '8 Iron',
-    type: 'iron', 
+    type: 'iron',
     clubSpeed: 87,
     attackAngle: -4.5,
     ballSpeed: 115,
@@ -140,10 +156,10 @@ const pgaTourAverages = {
     descentAngle: 50,
     carry: 160,
   },
-  '9-iron': { 
+  '9-iron': {
     id: '9-iron',
     name: '9 Iron',
-    type: 'iron', 
+    type: 'iron',
     clubSpeed: 85,
     attackAngle: -4.7,
     ballSpeed: 109,
@@ -154,10 +170,10 @@ const pgaTourAverages = {
     descentAngle: 51,
     carry: 148,
   },
-  'PW': { 
+  PW: {
     id: 'PW',
     name: 'PW',
-    type: 'iron', 
+    type: 'iron',
     clubSpeed: 83,
     attackAngle: -5.0,
     ballSpeed: 102,
@@ -171,10 +187,10 @@ const pgaTourAverages = {
 };
 
 const lpgaTourAverages = {
-  'Driver': { 
+  Driver: {
     id: 'Driver',
     name: 'Driver',
-    type: 'wood', 
+    type: 'wood',
     clubSpeed: 94,
     attackAngle: 3.0,
     ballSpeed: 140,
@@ -185,10 +201,10 @@ const lpgaTourAverages = {
     descentAngle: 37,
     carry: 218,
   },
-  '3-wood': { 
+  '3-wood': {
     id: '3-wood',
     name: '3 Wood',
-    type: 'wood', 
+    type: 'wood',
     clubSpeed: 90,
     attackAngle: -0.9,
     ballSpeed: 132,
@@ -199,10 +215,10 @@ const lpgaTourAverages = {
     descentAngle: 39,
     carry: 195,
   },
-  '5-wood': { 
+  '5-wood': {
     id: '5-wood',
     name: '5 Wood',
-    type: 'wood', 
+    type: 'wood',
     clubSpeed: 88,
     attackAngle: -1.8,
     ballSpeed: 128,
@@ -213,10 +229,10 @@ const lpgaTourAverages = {
     descentAngle: 43,
     carry: 185,
   },
-  '7-wood': { 
+  '7-wood': {
     id: '7-wood',
     name: '7 Wood',
-    type: 'wood', 
+    type: 'wood',
     clubSpeed: 85,
     attackAngle: -3.0,
     ballSpeed: 123,
@@ -227,10 +243,10 @@ const lpgaTourAverages = {
     descentAngle: 46,
     carry: 174,
   },
-  '4-iron': { 
+  '4-iron': {
     id: '4-iron',
     name: '4 Iron',
-    type: 'iron', 
+    type: 'iron',
     clubSpeed: 80,
     attackAngle: -1.7,
     ballSpeed: 116,
@@ -241,10 +257,10 @@ const lpgaTourAverages = {
     descentAngle: 43,
     carry: 169,
   },
-  '5-iron': { 
+  '5-iron': {
     id: '5-iron',
     name: '5 Iron',
-    type: 'iron', 
+    type: 'iron',
     clubSpeed: 79,
     attackAngle: -1.9,
     ballSpeed: 112,
@@ -258,7 +274,7 @@ const lpgaTourAverages = {
   '6-iron': {
     id: '6-iron',
     name: '6 Iron',
-    type: 'iron',  
+    type: 'iron',
     clubSpeed: 78,
     attackAngle: -2.3,
     ballSpeed: 109,
@@ -269,10 +285,10 @@ const lpgaTourAverages = {
     descentAngle: 46,
     carry: 152,
   },
-  '7-iron': { 
+  '7-iron': {
     id: '7-iron',
     name: '7 Iron',
-    type: 'iron', 
+    type: 'iron',
     clubSpeed: 76,
     attackAngle: -2.3,
     ballSpeed: 104,
@@ -283,10 +299,10 @@ const lpgaTourAverages = {
     descentAngle: 47,
     carry: 141,
   },
-  '8-iron': { 
+  '8-iron': {
     id: '8-iron',
     name: '8 Iron',
-    type: 'iron', 
+    type: 'iron',
     clubSpeed: 74,
     attackAngle: -3.1,
     ballSpeed: 100,
@@ -297,10 +313,10 @@ const lpgaTourAverages = {
     descentAngle: 47,
     carry: 130,
   },
-  '9-iron': { 
+  '9-iron': {
     id: '9-iron',
     name: '9 Iron',
-    type: 'iron', 
+    type: 'iron',
     clubSpeed: 72,
     attackAngle: -3.1,
     ballSpeed: 93,
@@ -311,10 +327,10 @@ const lpgaTourAverages = {
     descentAngle: 47,
     carry: 119,
   },
-  'PW': { 
+  PW: {
     id: 'PW',
     name: 'PW',
-    type: 'iron', 
+    type: 'iron',
     clubSpeed: 70,
     attackAngle: -2.8,
     ballSpeed: 86,
@@ -325,16 +341,18 @@ const lpgaTourAverages = {
     descentAngle: 48,
     carry: 107,
   },
-}
+};
 
 export const statsForClub = (club: string, tour: string) => {
-  const allStats: any = tour === 'PGA' ? pgaTourAverages : lpgaTourAverages;
+  const allStats: { [key: string]: IClub } =
+    tour === 'PGA' ? pgaTourAverages : lpgaTourAverages;
   // Returns the stats for a single club
   return allStats[club];
-}
+};
 
 export const allClubs = (tour: string) => {
-  const allClubs: any = tour === 'PGA' ? pgaTourAverages : lpgaTourAverages;
+  const allClubs: { [key: string]: IClub } =
+    tour === 'PGA' ? pgaTourAverages : lpgaTourAverages;
   // Return all club information
   return Object.values(allClubs);
-}
+};

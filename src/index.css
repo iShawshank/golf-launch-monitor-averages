@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  @apply bg-light-black;
+  @apply text-green;
+}
+
+.header {
+  height: 2.5rem;
+  border-bottom: 1px solid;
+}
+
+.footer {
+  height: 40px;
+  border-top: 1px solid;
+}
+
+.link {
+  padding-inline: 40px;
+}
+
+.main-content {
+  min-height: 90vh;
+  width: 100%;
+  padding: 20px;
+}
+
+.tour-logo {
+  max-height: 300px;
+}
+
+.club-option {
+  height: 150px;
+  width: 150px;
+
+  @media screen and (min-width: 1024px) {
+    height: 200px;
+    width: 200px;
+  }
+
+  @media screen and (min-width: 1630px) {
+    height: 250px;
+    width: 250px;
+  }
+}
+
+.club-option-logo-image {
+  height: 80px;
+  width: 80px;
+
+  @media screen and (min-width: 1024px) {
+    height: 120px;
+    width: 120px;
+  }
+
+  @media screen and (min-width: 1630px) {
+    height: 150px;
+    width: 150px;
+  }
+}
+
+.stats-card {
+  height: 150px;
+  width: 150px;
+
+  @media screen and (min-width: 1024px) {
+    height: 160px;
+    width: 200px;
+  }
+
+  @media screen and (min-width: 1630px) {
+    height: 200px;
+    width: 300px;
+  }
+}
+
+.stats-card-name {
+  height: 65px;
+}
+
+.stats-card-value {
+  @media screen and (min-width: 1630px) {
+    font-size: 6rem !important;
+  }
+}
+
+.donate-header {
+  border-bottom: 2px solid;
+  padding-bottom: 0.5rem;
+}
+
+.donate-body {
+  max-width: 500px;
+  text-align: justify;
+}
+
+.donate-img {
+  width: 450px;
+}
+
+a:hover {
+  color: white;
+  span {
+    color: white;
+  }
+}
