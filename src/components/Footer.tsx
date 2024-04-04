@@ -10,7 +10,9 @@ const Footer = () => {
 
   return (
     <footer className="footer bg-light-black border-neutral-2 w-full text-center flex flex-col gap-4">
-      <Link to='/donate' className='mt-2'>Enjoying this app? Buy me a beer</Link>
+      <Link to="/donate" className="mt-2">
+        Enjoying this app? Buy me a beer
+      </Link>
       {isTour && (
         <a
           className="icon-attribute text-xs"
