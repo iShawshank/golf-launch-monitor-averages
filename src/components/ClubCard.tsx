@@ -13,12 +13,12 @@ const ClubCard = ({
   extraText?: string;
   tour: string;
 }) => {
-  const clubLogo = `/img/${type}.png`;
+  const clubLogo = `/golf-launch-monitor-averages/img/${type}.png`;
 
   return (
     <div className="club-option border border-white rounded-xl gap-3 p-2 my-4 text-center w-full font-bold">
       <Link
-        to={`/${tour}/${id}`}
+        to={`/golf-launch-monitor-averages/${tour}/${id}`}
         className="flex flex-col justify-center gap-2"
       >
         <div className="club-option-text">

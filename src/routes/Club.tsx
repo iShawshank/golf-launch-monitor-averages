@@ -22,7 +22,7 @@ const Club = () => {
       <div className="my-4 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 align-middle justify-center">
         {clubs.map((club) => (
           <Link
-            to={`/${tour}/${club.id}`}
+            to={`/golf-launch-monitor-averages/${tour}/${club.id}`}
             key={club.id}
             className="m-2 p-2 text-white border-white border-2 rounded-xl flex align-middle flex-col"
           >

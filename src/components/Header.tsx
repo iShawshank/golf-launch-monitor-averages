@@ -20,13 +20,13 @@ const Header = () => {
         divide-x-2
       "
     >
-      <Link className="link" to="/">
+      <Link className="link" to="/golf-launch-monitor-averages/">
         Home
       </Link>
-      <Link className="link" to="/PGA">
+      <Link className="link" to="/golf-launch-monitor-averages/PGA">
         PGA
       </Link>
-      <Link className="link" to="/LPGA">
+      <Link className="link" to="/golf-launch-monitor-averages/LPGA">
         LPGA
       </Link>
     </nav>

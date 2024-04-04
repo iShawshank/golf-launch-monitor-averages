@@ -13,13 +13,22 @@ import Club from './routes/Club.tsx';
 
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: '/golf-launch-monitor-averages/',
     element: <App />,
     children: [
       { index: true, element: <Home /> },
-      { path: '/donate', element: <Donate /> },
-      { path: '/:tour', element: <Tour /> },
-      { path: '/:tour/:club', element: <Club /> },
+      {
+        path: '/golf-launch-monitor-averages/donate',
+        element: <Donate />,
+      },
+      {
+        path: '/golf-launch-monitor-averages/:tour',
+        element: <Tour />,
+      },
+      {
+        path: '/golf-launch-monitor-averages//:tour/:club',
+        element: <Club />,
+      },
     ],
   },
 ]);
