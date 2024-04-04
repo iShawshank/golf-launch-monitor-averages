@@ -1,4 +1,5 @@
 import { useLocation } from 'react-router';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   const location = useLocation();
@@ -8,7 +9,8 @@ const Footer = () => {
     location.pathname.toLowerCase() === '/lpga';
 
   return (
-    <footer className="footer bg-light-black border-neutral-2 w-full bottom-0 text-center">
+    <footer className="footer bg-light-black border-neutral-2 w-full text-center flex flex-col gap-4">
+      <Link to='/donate' className='mt-2'>Enjoying this app? Buy me a beer</Link>
       {isTour && (
         <a
           className="icon-attribute text-xs"

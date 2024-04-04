@@ -29,9 +29,6 @@ const Header = () => {
       <Link className="link" to="/LPGA">
         LPGA
       </Link>
-      <Link className="link" to="/donate">
-        Donate
-      </Link>
     </nav>
   );
 };
