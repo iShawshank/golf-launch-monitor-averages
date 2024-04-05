@@ -3,8 +3,17 @@ import { allClubs, statsForClub } from '../utils/tourAverages';
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import StatsCard from '../components/StatsCard';
+import Cookies from 'js-cookie';
+import ReactSwitch from 'react-switch';
+
+const METERS_MODIFIER = 0.9144;
 
 const Club = () => {
+  const useMetricsCookie: string | undefined =
+    Cookies.get('useMetrics');
+  const [isMetrics, setIsMetrics] = useState(
+    useMetricsCookie === 'true' ? true : false
+  );
   const { tour, club } = useParams();
 
   const clubs = allClubs(tour as string);
@@ -16,6 +25,12 @@ const Club = () => {
   useEffect(() => {
     setTourAverages(statsForClub(club as string, tour as string));
   }, [tour, club]);
+
+  const handleChange = () => {
+    const newValue = !isMetrics;
+    Cookies.set('useMetrics', newValue.toString());
+    setIsMetrics(newValue);
+  };
 
   return (
     <div className="single-club-page flex flex-col py-2 justify-center text-center w-full">
@@ -30,9 +45,12 @@ const Club = () => {
           </Link>
         ))}
       </div>
-      <h1 className="text-xl">
-        {tour} Tour <span className="text-white">{club}</span> Average
-      </h1>
+      <div className="items-center">
+        <h1 className="text-xl md:col-span-4 lg:col-span-7">
+          {tour} Tour <span className="text-white">{club}</span>{' '}
+          Average
+        </h1>
+      </div>
       <div className="averages h-full grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-5 m-5 justify-items-center items-center">
         <StatsCard
           name="Club speed"
@@ -52,13 +70,21 @@ const Club = () => {
         />
         <StatsCard
           name="Carry"
-          extraInfo="yds"
-          value={tourAverages.carry}
+          extraInfo={isMetrics ? 'meters' : 'yds'}
+          value={
+            isMetrics
+              ? Math.round(tourAverages.carry * METERS_MODIFIER)
+              : tourAverages.carry
+          }
         />
         <StatsCard
           name="Peak Height"
-          extraInfo="yds"
-          value={tourAverages.peakHeight}
+          extraInfo={isMetrics ? 'meters' : 'yds'}
+          value={
+            isMetrics
+              ? Math.round(tourAverages.peakHeight * METERS_MODIFIER)
+              : tourAverages.peakHeight
+          }
         />
         <StatsCard
           name="Descent Angle"
@@ -75,6 +101,17 @@ const Club = () => {
           extraInfo="deg"
           value={tourAverages.VLA}
         />
+      </div>
+      <div className="options flex gap-4 justify-center items-center m-4">
+        <p className="text-xl">{'Meters:'}</p>
+        <label className="flex items-center">
+          <ReactSwitch
+            onChange={handleChange}
+            checked={isMetrics}
+            offColor="#FF0000"
+            onColor="#3ef016"
+          />
+        </label>
       </div>
     </div>
   );

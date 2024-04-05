@@ -1,0 +1,74 @@
+query AverageDrivingStats {
+  ClubSpeed: statDetails(
+    tourCode: R
+    statId: "02401"
+    year: 2024
+    eventQuery: null
+  ) {
+    statTitle
+    tourAvg
+  }
+  Ballspeed: statDetails(
+    tourCode: R
+    statId: "02402"
+    year: 2024
+    eventQuery: null
+  ) {
+    statTitle
+    tourAvg
+  }
+  Smash: statDetails(
+    tourCode: R
+    statId: "02403"
+    year: 2024
+    eventQuery: null
+  ) {
+    statTitle
+    tourAvg
+  }
+  VLA: statDetails(
+    tourCode: R
+    statId: "02404"
+    year: 2024
+    eventQuery: null
+  ) {
+    statTitle
+    tourAvg
+  }
+  Spin: statDetails(
+    tourCode: R
+    statId: "02405"
+    year: 2024
+    eventQuery: null
+  ) {
+    statTitle
+    tourAvg
+  }
+  ApexDistance: statDetails(
+    tourCode: R
+    statId: "02406"
+    year: 2024
+    eventQuery: null
+  ) {
+    statTitle
+    tourAvg
+  }
+  ApexHeight: statDetails(
+    tourCode: R
+    statId: "02407"
+    year: 2024
+    eventQuery: null
+  ) {
+    statTitle
+    tourAvg
+  }
+  Carry: statDetails(
+    tourCode: R
+    statId: "02409"
+    year: 2024
+    eventQuery: null
+  ) {
+    statTitle
+    tourAvg
+  }
+}
