@@ -26,7 +26,7 @@ const router = createBrowserRouter([
         element: <Tour />,
       },
       {
-        path: '/golf-launch-monitor-averages//:tour/:club',
+        path: '/golf-launch-monitor-averages/:tour/:club',
         element: <Club />,
       },
     ],
