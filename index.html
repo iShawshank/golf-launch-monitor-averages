@@ -16,7 +16,11 @@
       (() => {
         const redirect = sessionStorage.redirect;
         delete sessionStorage.redirect;
-        if (redirect && redirect !== location.href) {
+        if (
+          redirect &&
+          redirect !==
+            location.href + '/golf-launch-monitor-averages/'
+        ) {
           history.replaceState(null, null, redirect);
         }
       })();
