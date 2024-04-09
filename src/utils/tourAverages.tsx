@@ -345,14 +345,14 @@ const lpgaTourAverages = {
 
 export const statsForClub = (club: string, tour: string) => {
   const allStats: { [key: string]: IClub } =
-    tour === 'PGA' ? pgaTourAverages : lpgaTourAverages;
+    tour.toUpperCase() === 'PGA' ? pgaTourAverages : lpgaTourAverages;
   // Returns the stats for a single club
   return allStats[club];
 };
 
 export const allClubs = (tour: string) => {
   const allClubs: { [key: string]: IClub } =
-    tour === 'PGA' ? pgaTourAverages : lpgaTourAverages;
+    tour.toUpperCase() === 'PGA' ? pgaTourAverages : lpgaTourAverages;
   // Return all club information
   return Object.values(allClubs);
 };
